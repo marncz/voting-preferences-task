@@ -23,7 +23,7 @@
         <nav>
           <ul class="nav nav-pills float-right">
             <li class="nav-item">
-              <a class="nav-link" href="">Home </a>
+              <a class="nav-link" href="index.php">Home </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="results.php">Results </a>
