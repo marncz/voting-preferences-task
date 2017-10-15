@@ -1,3 +1,6 @@
+# Live demo
+
+Live demo of the app is available here: http://underhat.net/voting
 
 # Requirements
 
