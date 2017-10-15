@@ -1,7 +1,5 @@
 <?php
 include('db_connection.php');
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 // Create an empty array for errors, even when POST is not send - to avoid warnings.
 $form_errors = array();

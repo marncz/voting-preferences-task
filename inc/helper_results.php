@@ -58,7 +58,7 @@ foreach ($constituencies as $item) {
 }
 
 
-// Function for calculating turnout;
+// Function for calculating turnout.
 function calculate_turnout ($will_vote, $wont_vote) {
   if (($will_vote + $wont_vote) == 0)
     return 0;

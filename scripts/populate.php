@@ -6,8 +6,10 @@ include("inc/db_connection.php");
  *   Script also simulates a person choosing not to vote.
  */
 
-// Init variables;
+// Initialize variables;
 $count = ($argv[1]) ? $argv[1] : 100;
+$gss_codes = array();
+
 
 // Taken from https://en.wikipedia.org/wiki/United_Kingdom_general_election,_2017
 $candidates = array(
@@ -34,10 +36,8 @@ $candidates = array(
   "Howling Laud Hope",
   "Sophie Walker",
   "Jim Allister",
-  "", // empty value for simulating a person that does not want to vote.
+  "", // An empty value for simulating a person that does not want to vote.
 );
-
-$gss_codes = array();
 
 $json = json_decode(file_get_contents("constituencies.json"), true);
 $constituencies = $json['result']['items'];
@@ -47,6 +47,7 @@ foreach ($constituencies as $constituency) {
 
 print "--- Generating {$count} votes randomly\n\n";
 
+// Generate votes.
 for ($i = 0; $i < $count; $i++) {
   $rand_gss_code = $gss_codes[rand(0, count($gss_codes) - 1)];
   $rand_candidate = $candidates[rand(0, count($candidates) - 1)];

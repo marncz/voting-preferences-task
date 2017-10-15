@@ -47,10 +47,9 @@ $_SESSION['captcha'] = simple_php_captcha();
         <?php
         $i = 0;
         foreach($top_candidates as $name => $votes) {
-            $i++;
-            echo "{$i}. <b>{$name}</b> - {$votes} votes <br>";
-        }
-        ?>
+          $i++;
+          echo "{$i}. <b>{$name}</b> - {$votes} votes <br>";
+        } ?>
         </p>
         <h3>Statistics</h3>
         <p>
@@ -62,12 +61,11 @@ $_SESSION['captcha'] = simple_php_captcha();
         <h1 class="display-5">Voting results</h1>
         <p class="lead">Below is a list of constituencies along with votes.</p>
         <?php
-
         foreach ($constituencies_with_votes as $gss_code) {
           $details = $constituencies_array[$gss_code];
-          echo "<br><h2>{$details['name']}</h2>";
-          echo "Will and won't vote: <b>{$details['will_vote']} / {$details['wont_vote']} </b><br>";
-          echo "Turnout: <b>". calculate_turnout($details['will_vote'], $details['wont_vote']). "%</b><br><br>";
+          echo "<br><h2> {$details['name']} </h2>";
+          echo "Will and won't vote: <b> {$details['will_vote']} / {$details['wont_vote']} </b><br>";
+          echo "Turnout: <b> ". calculate_turnout($details['will_vote'], $details['wont_vote']). "% </b><br><br>";
 
           $i = 0;
           foreach($details['top_candidates'] as $name => $votes) {
@@ -76,9 +74,7 @@ $_SESSION['captcha'] = simple_php_captcha();
               echo (($votes == 1) ? "vote" : "votes") . "<br>";
           }
           echo "<hr>";
-        }
-
-        ?>
+        } ?>
         <hr>
         <h1 class="display-6">Constituencies without votes</h1>
         <p class="lead">This is a list of constituencies without any votes.</p>
