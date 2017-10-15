@@ -32,6 +32,7 @@ Used php-simple-captcha library: https://labs.abeautifulsite.net/simple-php-capt
 5. (Optional) populate database with random data by running `php scripts/populate.php [number_of_votes_to_generate]`
 
 # Design choices
+- There is some inline PHP code mixed with HTML, that would not happen when using a framework and a template engine (such as blade).
 - Form validation in PHP instead of JavaScript as this is a simple form using POST.
 - Simple captcha to avoid flooding a bit (in real life application) - not so much as this is a basic captcha only.
 - Only one external library used, so no need for package managment (composer). 
