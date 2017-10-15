@@ -22,7 +22,7 @@ Used php-simple-captcha library: https://labs.abeautifulsite.net/simple-php-capt
 - PHP GD2 library needed by php-simple-captcha 
 
 ## Configuration
-1. Open config/db_config.php and change values so it matches your MySQL database.
+1. Open config/db_config.php and change values so it matches your MySQL databases' details.
 
 ## Installation
 1. Clone the project into your web server by running:  `git clone https://github.com/marncz/voting-preferences-task.git voting` 
@@ -32,10 +32,14 @@ Used php-simple-captcha library: https://labs.abeautifulsite.net/simple-php-capt
 5. (Optional) populate database with random data by running `php scripts/populate.php [number_of_votes_to_generate]`
 
 # Design choices
-- Form validation in PHP instead of JavaScript.
+- Form validation in PHP instead of JavaScript as this is a simple form using POST.
 - Simple captcha to avoid flooding a bit (in real life application) - not so much as this is a basic captcha only.
 - Only one external library used, so no need for package managment (composer). 
 - MVC model really not needed for such small app, comments are clear and there would be no problems to extending or adding features to this web app.
+- Decided not to go with templates as this website only consists of three pages. 
+- Form has error checking based on forms validation in Laravel.
 
 ## Database 
-I chose to go with the simplest possible setup and shift calculating votes to the PHP serving the webpage. Database uses gss_codes served by the British parliament's API.  
+I chose to go with the simplest possible setup and shift calculating votes to the PHP serving the webpage. Database uses `gssCodes` served by the British parliament's API. Script is using PDO as the database driver.
+
+Tried to use in-memory sqlite solution but focused on other things while developing and I ran out of time.
