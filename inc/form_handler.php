@@ -37,7 +37,7 @@ if ($_POST) {
     $stmt->execute();
 
     // Redirect to a thank you page.
-    header("Location: /thankyou.php");
+    header("Location: thankyou.php");
   }
 
 } else {

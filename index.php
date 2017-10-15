@@ -30,10 +30,10 @@ $_SESSION['captcha'] = simple_php_captcha();
         <nav>
           <ul class="nav nav-pills float-right">
             <li class="nav-item">
-              <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link active" href="">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/results.php">Results</a>
+              <a class="nav-link" href="results.php">Results</a>
             </li>
           </ul>
         </nav>

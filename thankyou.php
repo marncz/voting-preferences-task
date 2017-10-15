@@ -23,10 +23,10 @@
         <nav>
           <ul class="nav nav-pills float-right">
             <li class="nav-item">
-              <a class="nav-link" href="/">Home </a>
+              <a class="nav-link" href="">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/results.php">Results </a>
+              <a class="nav-link" href="results.php">Results </a>
             </li>
           </ul>
         </nav>
@@ -35,7 +35,7 @@
 
       <div class="jumbotron">
         <h1 class="display-5">Thank you for sharing!</h1>
-        You can now view the <a href="/results.php">results</a>.<br>
+        You can now view the <a href="results.php">results</a>.<br>
 
       </div>
 
